@@ -73,3 +73,62 @@ export const assets = {
     totalBookingIcon,
     totalRevenueIcon,
 }
+
+// Rooms Dummy Data
+export const roomsDummyData = [
+    {
+        "_id": "67f7647c197ac559e4089b96",
+        "number": "1",
+        "type": "Double Bed",
+        "price": 399,
+        "amenities": ["Room Service", "Mountain View", "Pool Access"],
+        "images": [roomImg1, roomImg2, roomImg3, roomImg4],
+        "isAvailable": true,
+        "createdAt": "2025-04-10T06:26:04.013Z",
+        "updatedAt": "2025-04-10T06:26:04.013Z",
+        "__v": 0
+    },
+    {
+        "_id": "67f76452197ac559e4089b8e",
+        "number": "2",
+        "type": "Double Bed",
+        "price": 299,
+        "amenities": ["Room Service", "Mountain View", "Pool Access"],
+        "images": [roomImg2, roomImg3, roomImg4, roomImg1],
+        "isAvailable": true,
+        "createdAt": "2025-04-10T06:25:22.593Z",
+        "updatedAt": "2025-04-10T06:25:22.593Z",
+        "__v": 0
+    },
+    {
+        "_id": "67f76406197ac559e4089b82",
+        "number": "3",
+        "type": "Double Bed",
+        "price": 249,
+        "amenities": ["Free WiFi", "Free Breakfast", "Room Service"],
+        "images": [roomImg3, roomImg4, roomImg1, roomImg2],
+        "isAvailable": true,
+        "createdAt": "2025-04-10T06:24:06.285Z",
+        "updatedAt": "2025-04-10T06:24:06.285Z",
+        "__v": 0
+    },
+    {
+        "_id": "67f763d8197ac559e4089b7a",
+        "number": "4",
+        "type": "Single Bed",
+        "price": 199,
+        "amenities": ["Free WiFi", "Room Service", "Pool Access"],
+        "images": [roomImg4, roomImg1, roomImg2, roomImg3],
+        "isAvailable": true,
+        "createdAt": "2025-04-10T06:23:20.252Z",
+        "updatedAt": "2025-04-10T06:23:20.252Z",
+        "__v": 0
+    }
+]
+
+// Testimonials Dummy Data
+export const testimonials = [
+    { id: 1, name: "Emma Rodriguez", review: "I've stayed at many guesthouses before, but none compare to the personalized experience and attention to detail that Rose Garden provides." },
+    { id: 2, name: "Liam Johnson", review: "Rose Garden exceeded my expectations. The booking process was seamless, and the rooms were absolutely top-notch. Highly recommended!" },
+    { id: 3, name: "Sophia Lee", review: "Amazing service! I always find the best luxury accommodation through Rose Garden. They never disappoint!" }
+];

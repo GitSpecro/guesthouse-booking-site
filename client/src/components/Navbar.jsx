@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { assets } from '../assets/assets';
 
@@ -10,16 +10,24 @@ const Navbar = () => {
         { name: 'About', path: '/about' },
     ];
 
-    const [isScrolled, setIsScrolled] = React.useState(false);
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
+
+        if(location.pathname !== '/'){
+            setIsScrolled(true);
+            return;
+        }else{
+            setIsScrolled(false);
+        }
+
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [location.pathname]);
 
     return (
         <nav className={`fixed top-0 left-0 w-full flex items-center justify-around px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${isScrolled ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg py-3 md:py-4" : "py-4 md:py-6"}`}>
@@ -42,7 +50,12 @@ const Navbar = () => {
                 </button>
             </div>
 
-            
+            {/* Desktop Right */}
+            <div className="hidden md:flex items-center gap-4">
+                <button className={`px-8 py-2.5 rounded-full ml-4 cursor-pointer transition-all duration-500 ${isScrolled ? "text-white bg-black" : "bg-white text-black"}`}>
+                    Logout
+                </button>
+            </div>
 
             {/* Mobile Menu Button */}
             <div className="flex items-center gap-3 md:hidden">
@@ -63,6 +76,10 @@ const Navbar = () => {
 
                 <button className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all">
                     Dashboard
+                </button>
+
+                <button className="bg-black text-white px-8 py-2.5 rounded-full cursor-pointer transition-all duration-500">
+                    Logout
                 </button>
             </div>
         </nav>
