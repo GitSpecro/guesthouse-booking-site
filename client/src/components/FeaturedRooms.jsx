@@ -14,7 +14,7 @@ const FeaturedRooms = () => {
 
       <div className='flex flex-wrap items-center justify-center gap-6 mt-20'>
         {roomsDummyData.slice(0, 4).map((room, index) => (
-            <RoomCard room={room} index={index} key={room._id}/>
+            <RoomCard room={room} index={index} maxWidth={'70'} key={room._id}/>
         ))}
       </div>
 
