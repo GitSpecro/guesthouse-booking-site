@@ -23,7 +23,7 @@ const AllRooms = () => {
     ];
 
   return (
-    <div className='flex flex-col-reverse lg:flex-row items-start justify-between pt-42 md:pt-49 px-4 md:px-16 lg:px-24 xl:px-32'>
+    <div className='flex flex-col-reverse lg:flex-row items-start justify-between pt-28 md:pt-35 px-4 md:px-16 lg:px-24 xl:px-32'>
         <div>
             <Title title='Rooms' subTitle='Take a look at our available rooms and find your perfect stay.' align='left'/>
         
